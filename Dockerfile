@@ -4,7 +4,7 @@ LABEL maintainer="team@lean-delivery.com"
 
 #Linux setup
 RUN apk update \
-  && apk add --update alpine-sdk python make\
+  && apk add --update alpine-sdk python make g++\
   && apk del alpine-sdk \
   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
   && npm cache verify \
